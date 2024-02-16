@@ -12,7 +12,7 @@ export const Header = () => {
                 <div>Gallery</div>
             </Link>
         </nav>
-        <Link href="/" className={styles.link}>
+        <Link href="/">
             <h1 className={styles.title}>Washazon</h1>
         </Link>
         <div className={styles.cart}>

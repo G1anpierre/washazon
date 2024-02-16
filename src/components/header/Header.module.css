@@ -14,10 +14,6 @@
     display: none;
 }
 
-.link {
-    text-decoration: none;
-    color: var(--text-color);
-}
 
 .title {
     font-size: 1.5rem;

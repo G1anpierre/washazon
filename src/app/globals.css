@@ -10,6 +10,19 @@
   --white: #fff;
 }
 
+/* Remove default styles from ul, li, and a tags */
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 /* Mobile styles */
 body {
@@ -21,14 +34,14 @@ body {
 
 /* Tablet styles */
 @media (min-width: 768px) {
-  body {
-    /* background-color: var(--secondary-color); */
-  }
+  /* body {
+    background-color: var(--secondary-color);
+  } */
 }
 
 /* Desktop styles */
 @media (min-width: 1024px) {
-  body {
-    /* background-color: var(--primary-color); */
-  }
+  /* body {
+    background-color: var(--primary-color);
+  } */
 }
