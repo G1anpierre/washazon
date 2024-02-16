@@ -4,10 +4,12 @@
 }
 
 :root {
-  --primary-color: #0070f3;
-  --secondary-color: #1a202c;
+  --primary-color: #818688;
+  --secondary-color: #0a121b;
+  --terciary-color: #e4eaeb;
   --text-color: #2d3748;
   --white: #fff;
+  --background-color: var(--terciary-color);
 }
 
 /* Remove default styles from ul, li, and a tags */
@@ -21,6 +23,16 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 

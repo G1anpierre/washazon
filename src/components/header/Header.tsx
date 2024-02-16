@@ -6,18 +6,20 @@ import { Cart } from '../Icons/Cart'
 
 export const Header = () => {
   return (
-    <header className={styles.container}>
-        <nav className={styles.navbar}>
-            <Link href='/gallery' className={styles.link}>
-                <div>Gallery</div>
+    <header className={styles.header}>
+        <div className={styles.container}>
+            <nav className={styles.navbar}>
+                <Link href='/gallery' className={styles.link}>
+                    <div>Gallery</div>
+                </Link>
+            </nav>
+            <Link href="/">
+                <h1 className={styles.title}>Washazon</h1>
             </Link>
-        </nav>
-        <Link href="/">
-            <h1 className={styles.title}>Washazon</h1>
-        </Link>
-        <div className={styles.cart}>
-            <div>Cart</div>
-            <Cart height={20} width={20}/>
+            <div className={styles.cart}>
+                <div>Cart</div>
+                <Cart height={20} width={20}/>
+            </div>
         </div>
     </header>
   )
