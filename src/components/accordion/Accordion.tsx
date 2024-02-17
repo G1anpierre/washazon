@@ -38,7 +38,7 @@ export const Accordion = ({description, specifications}: AccordionProps) => {
                       <h2
                       className={styles.title}
                       id={accordionItem.title === 'Specifications' ? 'specifications': 'productDescription'}>{accordionItem.title}</h2>
-                      <ArrowDown height={20} width={20} />
+                      <ArrowDown height={20} width={20} className={`${styles.open} ${styles.close}` }/>
                     </div>
                     <div className={styles.contentContainer}>
                       <AccordionContent content={accordionItem.content} />
