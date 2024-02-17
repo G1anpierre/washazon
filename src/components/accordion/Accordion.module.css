@@ -1,49 +1,48 @@
-
 .container {
-    padding: 1rem
+  padding: 1rem;
 }
 
 .titleContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .row {
-    border-top: 1px solid var(--border-color);
-    /* border-bottom: 1px solid var(--border-color); */
+  border-top: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
 .title {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .contentContainer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
-.active .contentContainer{
-    max-height: 100%;
-    transition: max-height 0.3s ease-in;
+.active .contentContainer {
+  max-height: 100%;
+  transition: max-height 0.3s ease-in;
 }
 
 .active .open {
-    transform: rotate(180deg);
-    transition: transform 0.3s ease-in;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in;
 }
 
 .close {
-    transform: rotate(0deg);
-    transition: transform 0.3s ease-in;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in;
 }
 
 @media (min-width: 768px) {
-    .container {
-        padding:1rem 2rem;
-        max-width: 1520px;
-        margin: 0 auto
-    }
+  .container {
+    padding: 1rem 2rem;
+    max-width: 1520px;
+    margin: 0 auto;
+  }
 }

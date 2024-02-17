@@ -1,24 +1,24 @@
-
-.textContent, .specificationContent {
-    padding: 1rem 0;
+.textContent,
+.specificationContent {
+  padding: 1rem 0;
 }
 
 .row {
-    display: flex;
-    border: 1px solid var(--border-color);
-    padding: .5rem;
+  display: flex;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
 }
 
 .row:nth-child(odd) {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 .name {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .value {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }

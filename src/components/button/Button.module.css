@@ -1,27 +1,26 @@
-
 .button {
-    border-radius: 7px;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 20px 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
+  border-radius: 7px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 20px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .button:active {
-    transform: scale(.98);
+  transform: scale(0.98);
 }
 
 .button:focus {
-    outline: none;
+  outline: none;
 }
 
 .button.primary {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
