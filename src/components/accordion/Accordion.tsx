@@ -3,10 +3,11 @@ import React from 'react'
 import styles from './Accordion.module.css'
 import { AccordionContent } from '../accordionContent/AccordionContent'
 import { ArrowDown } from '../Icons/ArrowDown'
+import { SpectType } from '@/types'
 
 type AccordionProps = {
-    description: string
-    specifications: []
+    description: string,
+    specifications: SpectType[]
 }
 
 

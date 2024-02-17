@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './AccordionContent.module.css'
 import { convert } from 'html-to-text';
+import { SpectType } from '@/types';
 
 
 
 type AccordionContentProps = {
-    content: string | []
+    content: string | SpectType[]
 }
 
 export const AccordionContent = ({content}: AccordionContentProps) => {

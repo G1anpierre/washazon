@@ -11,7 +11,7 @@ const GalleryPage = async () => {
   return (
     <section className={styles.container}>{
         <ul className={styles.layout}>
-            {products.data?.map((product: any) => (
+            {products?.map((product: any) => (
                 <Link href={`/product/${product.id}`} key={product.id}>
                   <Product product={product} />
                 </Link>

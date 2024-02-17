@@ -15,6 +15,7 @@ type ProductPageProps = {
 
 const ProductPage = async ({params}: ProductPageProps) => {
     const product = await getProduct(params.id)
+    if(!product) return
 
   return (
     <>

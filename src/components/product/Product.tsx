@@ -1,9 +1,13 @@
 import React from 'react'
 import styles from './Product.module.css'
 import Image from 'next/image';
+import { ProductType } from '@/types';
 
+type ProductProps = {
+  product: ProductType
+}
 
-export const Product = ({product}: any) => {
+export const Product = ({product}: ProductProps) => {
 
   return (
      <li key={product.id} className={styles.container}>
