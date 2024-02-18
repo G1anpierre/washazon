@@ -36,7 +36,12 @@ const ProductPage = async ({ params }: ProductPageProps) => {
           <h3>{product.name}</h3>
 
           <SeeSpecifications />
-          <p>{product.price}</p>
+          <p>
+            {product.price.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
+          </p>
           <Button productId={`${product.id}`} serverAction={addToCartAction}>
             Add to Cart
           </Button>

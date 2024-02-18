@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
-// import { Inter } from 'next/font/google'
 import Link from "next/link";
-import { Cart } from "../Icons/Cart";
 import { CartArea } from "../cart/CartArea";
 
 export const Header = () => {

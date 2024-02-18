@@ -20,7 +20,12 @@ export const Product = ({ product }: ProductProps) => {
         />
       </div>
       <h2>{product.name}</h2>
-      <p>{product.price}</p>
+      <p>
+        {product.price.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}
+      </p>
     </li>
   );
 };
