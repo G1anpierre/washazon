@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header/Header";
 import { CartProvider } from "@/context/CartContext";
 import { getCart } from "./api/cart/cart";
+import { Search } from "@/components/search/Search";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <CartProvider cart={cart}>
           <Header />
+          <Search />
           {children}
         </CartProvider>
       </body>
