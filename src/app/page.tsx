@@ -1,7 +1,9 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import { Header } from "@/components/header/Header";
 
 export default function Home() {
-  return <main className={styles.main}>Hello World</main>;
+  return (
+    <main className={styles.main}>
+      <h1 className={styles.title}>WelCome to Washazon!</h1>
+    </main>
+  );
 }
