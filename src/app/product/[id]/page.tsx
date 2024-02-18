@@ -3,9 +3,9 @@ import styles from "./ProductPage.module.css";
 import { getProduct } from "@/utils/api";
 import Image from "next/image";
 import { Button } from "@/components/button/Button";
-import Link from "next/link";
 import { Accordion } from "@/components/accordion/Accordion";
 import { addToCartAction } from "@/actions/cart-actions";
+import { SeeSpecifications } from "@/components/seeSpecifications/SeeSpecifications";
 
 type ProductPageProps = {
   params: {
@@ -35,7 +35,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
           <h2>{product.brand}</h2>
           <h3>{product.name}</h3>
 
-          <Link href="#specifications">See specifications</Link>
+          <SeeSpecifications />
           <p>{product.price}</p>
           <Button productId={`${product.id}`} serverAction={addToCartAction}>
             Add to Cart

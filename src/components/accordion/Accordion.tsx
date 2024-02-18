@@ -4,6 +4,7 @@ import styles from "./Accordion.module.css";
 import { AccordionContent } from "../accordionContent/AccordionContent";
 import { ArrowDown } from "../Icons/ArrowDown";
 import { SpectType } from "@/types";
+import { useAccordionContext } from "@/context/AccordionContext";
 
 type AccordionProps = {
   description: string;
@@ -11,7 +12,7 @@ type AccordionProps = {
 };
 
 export const Accordion = ({ description, specifications }: AccordionProps) => {
-  const [active, setActive] = React.useState([true, false]);
+  const { state, setState } = useAccordionContext();
 
   const accortionItems = [
     {
@@ -25,8 +26,8 @@ export const Accordion = ({ description, specifications }: AccordionProps) => {
   ];
 
   const handleActiveStatus = (index: number) => {
-    const newActive = active.map((item, i) => (i === index ? !item : item));
-    setActive(newActive);
+    const newActive = state.map((item, i) => (i === index ? !item : item));
+    setState(newActive);
   };
 
   return (
@@ -35,7 +36,7 @@ export const Accordion = ({ description, specifications }: AccordionProps) => {
         {accortionItems.map((accordionItem, index) => (
           <li
             key={index}
-            className={`${active[index] ? styles.active : ""} ${styles.row}`}
+            className={`${state[index] ? styles.active : ""} ${styles.row}`}
           >
             <div
               className={styles.titleContainer}
