@@ -24,3 +24,13 @@
 .button.primary {
   background-color: var(--primary-color);
 }
+
+.buttonContent {
+  position: relative;
+}
+
+.buttonContent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

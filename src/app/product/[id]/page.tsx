@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/button/Button";
 import Link from "next/link";
 import { Accordion } from "@/components/accordion/Accordion";
+import { addToCartAction } from "@/actions/cart-actions";
 
 type ProductPageProps = {
   params: {
@@ -36,7 +37,9 @@ const ProductPage = async ({ params }: ProductPageProps) => {
 
           <Link href="#specifications">See specifications</Link>
           <p>{product.price}</p>
-          <Button>Add to Cart</Button>
+          <Button productId={`${product.id}`} serverAction={addToCartAction}>
+            Add to Cart
+          </Button>
         </section>
       </div>
       <Accordion

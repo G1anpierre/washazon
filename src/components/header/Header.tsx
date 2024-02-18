@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 // import { Inter } from 'next/font/google'
 import Link from "next/link";
 import { Cart } from "../Icons/Cart";
+import { CartArea } from "../cart/CartArea";
 
 export const Header = () => {
   return (
@@ -17,8 +18,7 @@ export const Header = () => {
           <h1 className={styles.title}>Washazon</h1>
         </Link>
         <div className={styles.cart}>
-          <div>Cart</div>
-          <Cart height={20} width={20} />
+          <CartArea />
         </div>
       </div>
     </header>
