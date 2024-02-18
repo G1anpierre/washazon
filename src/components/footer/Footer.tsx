@@ -45,7 +45,7 @@ export const Footer = () => {
               href={item.href}
               className={styles.iconContainer}
             >
-              <span className="sr-only">{item.name}</span>
+              <span className={styles.srOnly}>{item.name}</span>
               <item.icon className={styles.icon} aria-hidden="true" />
             </a>
           ))}
