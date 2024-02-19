@@ -22,9 +22,11 @@ pnpm dev
 bun dev
 ```
 
-Third, This application has been deploid in Vercel, so you can see it online under the followind url:
+Third, This application has been deployed in Vercel, so you can see it online under the followind url:
 
 https://washazon.vercel.app/
+
+## For Local Development
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
