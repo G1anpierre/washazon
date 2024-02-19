@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, configure your .env.local with your prefer localhost endtpoint, example:
+.env.example
+
+```
+NEXT_URL=http://localhost:3000
+
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -13,6 +21,10 @@ pnpm dev
 # or
 bun dev
 ```
+
+Third, This application has been deploid in Vercel, so you can see it online under the followind url:
+
+https://washazon.vercel.app/
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
