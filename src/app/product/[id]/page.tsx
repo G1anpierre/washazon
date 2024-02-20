@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProductPage.module.css";
-import { getProduct } from "@/utils/api";
+import { getProduct, getProducts } from "@/utils/api";
 import Image from "next/image";
 import { Button } from "@/components/button/Button";
 import { Accordion } from "@/components/accordion/Accordion";
@@ -56,3 +56,11 @@ const ProductPage = async ({ params }: ProductPageProps) => {
 };
 
 export default ProductPage;
+
+export async function generateStaticParams() {
+  const products = await getProducts();
+  if (!products) return [{ id: "1" }];
+  return products.map((product) => ({
+    id: String(product.id),
+  }));
+}
