@@ -6,9 +6,9 @@ import { useCart } from "@/context/CartContext";
 import { getCartQuantity } from "@/utils/funcs";
 
 export const CartArea = () => {
-  const { state } = useCart();
+  const cart = useCart()((store) => store.cart);
 
-  const quantity = useMemo(() => getCartQuantity(state), [state]);
+  const quantity = useMemo(() => getCartQuantity(cart), [cart]);
 
   return (
     <>

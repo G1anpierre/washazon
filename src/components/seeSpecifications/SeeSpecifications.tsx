@@ -2,10 +2,10 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./SeeSpecifications.module.css";
-import { useAccordionContext } from "@/context/AccordionContext";
+import { useAccordionStore } from "@/store/accordionStore";
 
 export const SeeSpecifications = () => {
-  const { state, setState } = useAccordionContext();
+  const { state, setState } = useAccordionStore((state) => state);
 
   const handleActiveStatus = () => {
     const newActive = state.map((item, i) => (i === 1 ? true : item));

@@ -4,7 +4,7 @@ import styles from "./Accordion.module.css";
 import { AccordionContent } from "../accordionContent/AccordionContent";
 import { ArrowDown } from "../Icons/ArrowDown";
 import { SpectType } from "@/types";
-import { useAccordionContext } from "@/context/AccordionContext";
+import { useAccordionStore } from "@/store/accordionStore";
 
 type AccordionProps = {
   description: string;
@@ -12,7 +12,7 @@ type AccordionProps = {
 };
 
 export const Accordion = ({ description, specifications }: AccordionProps) => {
-  const { state, setState } = useAccordionContext();
+  const { state, setState } = useAccordionStore((state) => state);
 
   const accortionItems = [
     {
