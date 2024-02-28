@@ -4,16 +4,6 @@ import React, { createContext, useContext, useState } from "react";
 import { type CartType } from "@/types";
 import { create } from "zustand";
 
-type CartContextType = {
-  state: CartType;
-  setState: React.Dispatch<React.SetStateAction<CartType>>;
-};
-
-const CartContext = createContext<CartContextType>({
-  state: { products: [] },
-  setState: () => {},
-});
-
 type Store = {
   cart: CartType;
   setCart: (cart: CartType) => void;
