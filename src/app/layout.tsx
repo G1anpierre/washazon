@@ -7,7 +7,7 @@ import { getCart } from "./api/cart/cart";
 import { Search } from "@/components/search/Search";
 import { Footer } from "@/components/footer/Footer";
 import { Suspense } from "react";
-
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,16 +24,18 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        <CartProvider cart={cart}>
-          <Header />
-          <Suspense>
-            <Search />
-          </Suspense>
-          {children}
-          <Footer />
-        </CartProvider>
-      </body>
+      <UserProvider>
+        <body className={inter.className} suppressHydrationWarning>
+          <CartProvider cart={cart}>
+            <Header />
+            <Suspense>
+              <Search />
+            </Suspense>
+            {children}
+            <Footer />
+          </CartProvider>
+        </body>
+      </UserProvider>
     </html>
   );
 }

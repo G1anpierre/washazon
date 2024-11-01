@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  gap: 1rem;
+}
+
+.container h2 {
+  font-size: 0.8rem;
+}
+
+.container p {
+  font-size: 0.5rem;
+  color: #666;
+}
+
+.container img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
